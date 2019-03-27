@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>酷逗机器人首页</title>
+</head>
+<body>
+<form action="sendmes" />
+<form action="sendans" />
+<input type="text" name="mes"/>
+    <input type="submit" value="发送">
+<div th:text="|在文本框中输入帮助或者help，可以获得查询步骤|"></div>
+<div  th:if="${mr}!=null" th:text="${mr.intent}"></div>
+    <div th:if="${mr}!=null" th:text="${mr.confidence}"></div>
+    <div th:if="${result}!=null" th:text="${result}"></div>
+</body>
+</html>
